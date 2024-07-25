@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+
+  input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+}
+/* Ramesh styles */
+body{
+  font: 'inter';
+}
+.bg-whitesmoke-100{
+  background-color: #191A1A;
+}
+.logo-img{
+  padding: 1rem 1.5rem 1.5rem;
+  background: #191a1a;
+}
+.logo-img img{
+  height: 40px;
+}
+.leftnav-pane{
+  background: #191a1a;
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+  font-weight: 500;
+  height: 100vh;
+  line-height: 2;
+}
+.leftnav-pane li{
+  margin-bottom: 0.4rem;
+}
+.leftnav-pane li a{
+  text-decoration: none;
+  color: #6e7391;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.leftnav-pane li img{
+  height: 20px;
+  margin-right: 0.6rem;
+}
+.main-body{
+  display: flex;
+}
+.leftnav{
+  width: 260px;
+}
+.outlet{
+  width: calc(100vw - 260px);
+  /* background-color: #f5f5f5; */
+}
+.toggle{
+  margin: 0 1rem;
+  cursor: pointer;
+}
+.header-search input{
+  box-shadow: none !important;
+    border-color: #E5E6E6 !important;
+    height: 34px;
+    border-width: 1.5px;
+    padding-right: 2rem;
+}
+.pos-rel{
+  position: relative;
+}
+.searchicon{
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+.searchicon img{
+  height: 20px;
+}
+.user-list{
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  margin-right: 1rem;
+}
+.notofication-icon{
+  margin-right: 0.8rem;
+}
+.username{
+  font-weight: 500;
+    color: #38355B;
+    cursor: pointer;
+}
+.userrole{
+  font-size: 12px;
+  font-weight: 500;
+  color: #637883;
+}
+.user-avtar{
+  height: 40px;
+    margin-right: 0.4rem;
+}
+.user-drop{
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 0px #ccc;
+  min-width: 200px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  margin-top: 10px;
+}
+
+.user-drop li{
+  padding: 0.5rem;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+.user-drop li:last-child{
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.layout-section{
+  padding: 0.7rem 1.2rem;
+}
+.light-btm-brd{
+  border-bottom: 1px solid #f5f5f5;
+}
+.download-excel{
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 6px 8px;
+  border-radius: 5px;
+}
+.download-excel img{
+  filter: brightness(0);
+  opacity: 0.7;
+}
+.expense-report-content p{
+  margin-bottom: 0;
+  color: #858585;
+}
+.status-flex{
+  width: 100%;
+  justify-content: space-between;
+}
+.theme-txt{
+  color: #38355B;
+  font-weight: 600;
+}
+.grey-txt{
+  color: #434345;
+  font-weight: 600;
+}
+.tosubmit-clr{
+  color: #b37100;
+  font-weight: 500;
+}
+.add-row-icon{
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+.add-row-title{
+  margin-bottom: 0;
+  font-size: 17px;
+}
+.add-row-icon img{
+  height: 25px;
+}
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root{
+  line-height: 2.8375em !important;
+}
+.sp-inputs .css-9v0f8w-MuiFormControl-root-MuiTextField-root{
+  width: 70px !important;
+}
+.primary-btn{
+  background-color: #1d174b !important;
+  color: #fff !important;
+}
+.save-btn{
+      background: #11009e !important;
+      color: #fff !important;
+}
+.primary-btn:hover{
+  background-color: #19115b !important;
+}
+.tbl-total td{
+  padding-left: 1.5rem;
+    text-align: left;
+}
+.aliagn-self-center{
+  vertical-align: middle;
+}
+.notification-pop{
+  background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 0px #ccc;
+    min-width: 200px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    padding: 0.5rem;
+}
+.count{
+ background-color: green;
+    padding: 2px 6px;
+    position: absolute;
+    left: 13px;
+    top: -7px;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 10px;
+}
+.not-count{
+     padding: 2px 6px;
+    background-color: green;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 10px;
+}
+.vert-mdl{
+      vertical-align: middle;
+}
+.css-1jy569b-MuiFormLabel-root-MuiInputLabel-root{
+  transform: translate(15px, -16px) scale(0.75) !important;
+  background: #fff;
+  padding: 0 7px !important;
+}
+.sp-field .MuiTable-root input{
+  height: 0px !important;
+}
+.tbl-border {
+  width: 97%;
+    border: 1px solid #ccc;
+    margin: auto;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.tbl-border th {
+  background-color: #1d174b !important;
+  color: #fff !important;
+  text-align: center;
+
+}
+.tbl-border td{
+  text-align: center;
+}
+
+/* Rasika Style */
+/* project overview styles */
+.create-btn {
+  background-color: #1d174a;
+  border-radius: 6px !important;
+  height: 40px;
+}
+.create-btn:hover {
+  color: var(--bs-btn-hover-color);
+  background-color: #04001f;
+  border-color: #04001f;
+}
+.overview-div span {
+  font-size: 13px;
+  margin-top: 4px;
+  color: #171331;
+}
