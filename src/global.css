@@ -362,6 +362,9 @@ body{
     padding-top: 3rem;
     text-align: center;
   }
+  .uset-left-banner-w{
+    height: 100%;
+  }
   .login-card {
     position: inherit;
     transform: inherit;
