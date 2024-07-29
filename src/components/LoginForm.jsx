@@ -68,7 +68,7 @@ const LoginForm = () => {
       <input type="text" placeholder="Enter Your Username or Email" className="form-control cust-login-field"/> 
       <img className="po-abs-icon" src="./user-id-icon.svg"/>    
     </div>
-    <div className="form-group  pos-rel">
+    <div className="form-group  pos-rel mt-4">
     <label for="username"></label>
       <input type="password" placeholder="Enter Your Password" className="form-control cust-login-field"/> 
       <img className="po-abs-icon" src="./password-lock-icon.svg"/>
