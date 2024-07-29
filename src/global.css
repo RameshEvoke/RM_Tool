@@ -282,3 +282,89 @@ body{
   margin-top: 4px;
   color: #171331;
 }
+
+/* Ramesh Styles */
+.form-group{
+  margin-bottom: 1rem;
+}
+.login-title{
+  font-weight: 900;
+}
+.cust-login-field{
+  padding-left: 1.3rem !important;
+  height: 36px;
+  padding-bottom: 0 !important;
+  font-size: 14px !important;
+  border-top: 0 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-radius: 0 !important;
+  border-color: #757D85 !important;
+  box-shadow: none !important;
+}
+.po-abs-icon{
+  position: absolute;
+  top: 13px;
+  height: 16px;
+  left: 1px;
+}
+.eye-icon{
+  position: absolute;
+  top: 13px;
+  height: 16px;
+  right: 1px;
+}
+.userinfo-txt{
+  color: #757D85;
+  font-size: 14px;
+}
+.forgot-passowrd-txt{
+  color: #0573CE;
+  font-weight: 500;
+  font-size: 16px;
+}
+.btn-login{
+  background-color: #F16A22 !important;
+  font-weight: 700;
+  color: #fff !important;
+  width: 100%;
+}
+.or-txt{
+  color: #757D85;
+  font-size: 13px;
+}
+.reg-txt{
+  color: #757D85;
+  font-size: 14px; 
+}
+.signup-txt{
+  text-decoration: none;
+  color: #0573CE;
+}
+.login-card{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  border: none;
+}
+.hyt-100vh{
+  height: 100vh;
+}
+.uset-left-banner-w{
+  width: 100%;
+  height: 100vh;
+}
+@media (max-width:768px){
+  .mobile-login{
+    padding-top: 3rem;
+    text-align: center;
+  }
+  .login-card {
+    position: inherit;
+    transform: inherit;
+    width: 100%;
+    border: none;
+}
+}

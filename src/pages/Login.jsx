@@ -3,10 +3,14 @@ import LoginForm from "../components/LoginForm";
 
 const Login = () => {
   return (
-    <div className="w-full relative bg-white flex flex-row flex-wrap items-start justify-start leading-[normal] tracking-[normal] [row-gap:20px]">
+     <div className="row mx-0 bg-white hyt-100vh">
+      <div className="col-md-6">
       <LeftPanel />
+      </div>
+      <div className="col-md-6 pos-rel mobile-login bg-white">
       <LoginForm />
-    </div>
+      </div>
+     </div>
   );
 };
 

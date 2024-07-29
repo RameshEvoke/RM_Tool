@@ -57,7 +57,61 @@ const LoginForm = () => {
   };
 
   return (
-    <section className="flex-1 flex flex-row items-center justify-center py-[106.5px] px-5 box-border min-w-[468px] max-w-full mq675:pt-[69px] mq675:pb-[69px] mq675:box-border mq675:min-w-full">
+ <div>
+<div className="card login-card">
+<div>
+<h4 className="login-title">Login</h4>
+  <p className="userinfo-txt">Please enter correct credentials below</p>
+  <form className="login-from">
+    <div className="form-group  pos-rel">
+    <label for="username"></label>
+      <input type="text" placeholder="Enter Your Username or Email" className="form-control cust-login-field"/> 
+      <img className="po-abs-icon" src="./user-id-icon.svg"/>    
+    </div>
+    <div className="form-group  pos-rel">
+    <label for="username"></label>
+      <input type="password" placeholder="Enter Your Password" className="form-control cust-login-field"/> 
+      <img className="po-abs-icon" src="./password-lock-icon.svg"/>
+      <img className="eye-icon" src="./eye-slash.svg"/>    
+    </div>
+    <div className="form-group">
+      <p className="text-center">
+        <a className="forgot-passowrd-txt" href="">Forgot Password</a>
+      </p>
+    </div>
+    <div className="form-group">
+      <button className="btn btn-login">Login</button>
+    </div>
+    <section className="self-stretch flex flex-row items-center justify-start gap-[25px]">
+          <img
+            className="h-px flex-1 relative max-w-full overflow-hidden"
+            loading="lazy"
+            alt=""
+            src="/vector-2.svg"
+          />
+          <div className="or-txt">
+            Or
+          </div>
+          <img
+            className="h-px flex-1 relative max-w-full overflow-hidden"
+            loading="lazy"
+            alt=""
+            src="/vector-2.svg"
+          />
+        </section>
+        <div className="self-stretch flex flex-col items-center justify-start gap-[5px]">
+          <h6 className="text-center mt-3 reg-txt">
+            Don't have an account?
+          </h6>
+          <a className="signup-txt" href="javascript:void(0)">
+            Sign Up
+          </a>
+        </div>
+  </form>
+</div>
+</div>
+
+    {/* <section className="flex-1 flex flex-row items-center justify-center py-[106.5px] px-5 box-border min-w-[468px] max-w-full mq675:pt-[69px] mq675:pb-[69px] mq675:box-border mq675:min-w-full">
       <form className="m-0 bg-white flex flex-col items-center justify-start gap-[20px] max-w-full" onSubmit={handleSubmit} onKeyPress={handleKeyPress}>
         <section className="self-stretch flex flex-col items-center justify-start gap-[8px]">
           <h2 className="m-0 self-stretch relative text-13xl font-black font-inter text-darkslategray text-left whitespace-nowrap mq450:text-lgi mq750:text-7xl">
@@ -114,7 +168,8 @@ const LoginForm = () => {
           </a>
         </div>
       </form>
-    </section>
+    </section> */}
+    </div>
   );
 };
 
