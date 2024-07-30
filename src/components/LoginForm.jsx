@@ -60,17 +60,23 @@ const LoginForm = () => {
  <div>
 <div className="card login-card">
 <div>
-<h4 className="login-title">Login</h4>
+
+
+  
+  <form className="login-from" onSubmit={handleSubmit} onKeyPress={handleKeyPress}>
+  <h3 className="login-title">Login</h3>
+  {error && <div className="text-red-500">{error}</div>}
   <p className="userinfo-txt">Please enter correct credentials below</p>
-  <form className="login-from">
     <div className="form-group  pos-rel">
     <label for="username"></label>
-      <input type="text" placeholder="Enter Your Username or Email" className="form-control cust-login-field"/> 
+      <input type="text" value={username} 
+              onChange={(e) => setUsername(e.target.value)} placeholder="Enter Your Username or Email" className="form-control cust-login-field"/> 
       <img className="po-abs-icon" src="./user-id-icon.svg"/>    
     </div>
     <div className="form-group  pos-rel mt-4">
     <label for="username"></label>
-      <input type="password" placeholder="Enter Your Password" className="form-control cust-login-field"/> 
+      <input type="password" placeholder="Enter Your Password" className="form-control cust-login-field" value={password} 
+              onChange={(e) => setPassword(e.target.value)}/> 
       <img className="po-abs-icon" src="./password-lock-icon.svg"/>
       <img className="eye-icon" src="./eye-slash.svg"/>    
     </div>
@@ -80,7 +86,7 @@ const LoginForm = () => {
       </p>
     </div>
     <div className="form-group">
-      <button className="btn btn-login">Login</button>
+      <button className="btn btn-login" type="submit">Login</button>
     </div>
     <section className="self-stretch flex flex-row items-center justify-start gap-[25px]">
           <img

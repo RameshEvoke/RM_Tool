@@ -16,7 +16,7 @@ const LeftNav2 = () => {
     }
   }, [location]);
 
-  const activeStyle = { color: '#b8e0e0' };
+  const activeStyle = { color: '#3bc0c3' };
 
   return (
     <div>
