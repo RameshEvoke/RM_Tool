@@ -2,6 +2,7 @@ import Header1 from "../components/Header";
 import LeftNav from "../components/LeftNav";
 import FrameComponent from "../components/Dashboard/FrameComponent";
 import TasksSection from "../components/Dashboard/TasksSection";
+import BreadcrumbResources from "../components/Accounts/BreadcrumbAccounts"; //Added Sample Breadcrumb for UI View Purpose
 
 const Dashboard = () => {
   return (
@@ -14,6 +15,10 @@ const Dashboard = () => {
         <div className="outlet">
           <Header1 />
           <div className="layout-section">
+            <div className="mb-3">
+            {/* Integrated Sample Breadcrumb */}
+            <BreadcrumbResources /> 
+            </div>
             <div className="row">
               <div className="col-md-6">
                 <div className=" project-parent-card">

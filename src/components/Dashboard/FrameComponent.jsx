@@ -1,13 +1,11 @@
 const FrameComponent = () => {
   return (
-    <div>
-       <div className="project-folder">
-                    <div className="me-4 mb-3">
-                      <img src="./folder-icon.svg"/>
-                      <p className="project-folder-text">Proj1</p>
-                    </div>
-                  </div>
-    </div>
+      <div className="project-folder">
+        <div className="me-4 mbl-space">
+          <img src="./folder-icon.svg" />
+          <p className="project-folder-text">Project 1</p>
+        </div>
+      </div>
     // <div className="flex-1 flex flex-col items-start justify-start text-left text-sm text-dimgray font-inter">
     //   <div className="self-stretch flex flex-col items-start justify-start p-2.5 relative gap-[10px]">
     //     <img

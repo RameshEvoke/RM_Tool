@@ -71,7 +71,18 @@ const TasksSection = () => {
               <span className="align-self-center"><img src="./right-arrow.svg"/></span>
             </div>
           </div>
-        
+          <div className="task-card card">
+            <div className="d-flex">
+              <div>
+                <img src="./my-task-avtar.svg"/>
+              </div>
+              <div className="ms-2 me-auto">
+                <h6 className="task-title">Timesheet entry</h6>
+                <p className="task-description">Ramya submitted timesheet for Jan 15-19, 2024</p>
+              </div>
+              <span className="align-self-center"><img src="./right-arrow.svg"/></span>
+            </div>
+          </div>
         </div>
       </div>
       {/* <div className="col-6 pe-0 items-start justify-start max-w-full text-left text-xl text-black font-poppins mq700:min-w-full mq975:flex-1">

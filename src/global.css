@@ -365,7 +365,7 @@ body{
 .project-parent-card{
   background-color: #fff;
   padding: 1rem 1rem 0.5rem 1rem;
-  box-shadow: -2px 0px 4px 0px #ededed;
+  box-shadow: 0px 1px 4px 0px #ededed;
   border-radius: 10px;
 }
 .project-card{
@@ -377,6 +377,8 @@ body{
   font-weight: 500;
   color: #5b5b5b;
   font-size: 14px;
+  margin-bottom: 0.3rem;
+  margin-left: 0.1rem;
 }
 .project-folder img{
   width: 100%;
@@ -432,7 +434,7 @@ body{
 .task-card{
   padding: 0.7rem;
   box-shadow: 0px 2px 3px 0px #ccc;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   cursor: pointer;
 }
 .task-title{
@@ -468,6 +470,9 @@ display: block;
   .mobile-login{
     padding-top: 3rem;
     text-align: center;
+  }
+  .mbl-space{
+    margin-bottom: 1rem;
   }
   .pro-folder-order{
     display: block;
