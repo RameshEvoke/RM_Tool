@@ -452,49 +452,61 @@ setShowOtherPurposeField(expenses.purpose_name === "Others");
   };
 //debugger;
   return (
-    <div className="self-stretch box-border flex flex-col items-end justify-start pt-[8px] pb-[5px] max-w-full text-left text-sm text-darkslateblue-100 font-poppins border-solid border-whitesmoke-200 border-[1px] border-t-[0] px-2">
+    <>
+    {/* <div className="self-stretch box-border flex flex-col items-end justify-start pt-[8px] pb-[5px] max-w-full text-left text-sm text-darkslateblue-100 font-poppins border-solid border-whitesmoke-200 border-[1px] border-t-[0] px-2">
       <div className="self-stretch flex flex-row items-center text-center justify-between max-w-full gap-[10px] mq750:flex-wrap mq1050:flex-wrap">
         <div className="flex flex-row items-center justify-start gap-[10px] max-w-full mq750:flex-wrap mq750:gap-[17px]">
           <div className="flex-1 flex text-center flex-row items-center justify-start gap-[0px] min-w-[240px]"></div>
-        </div>
-
+        </div> */}
+      <div className="">
+        <div className="">
+          <div className="">
+            <div className=""></div>
+          </div>
         {status === "To Be Submitted" && (
-          <button
-            className="border-[#DFE2EF] btn btn-outline-primary py-2 px-2 rounded-0 bg-white flex flex-row items-center justify-start gap-[5px] whitespace-nowrap border-[1px] border-solid border-lavender-200 hover:bg-gainsboro hover:box-border hover:border-[1px] hover:border-solid hover:border-lightsteelblue text-center"
-            onClick={handleOpenAddExpenseModal}
-          >
-            <img
-              className="h-5 w-5 relative min-h-[20px] me-1"
-              loading="lazy"
-              src="/addicon.svg"
-            />
-            <div className="relative text-sm font-semibold font-inter text-royalblue-300 text-left inline-block min-w-[120px]">
-              Add Expenses
-            </div>
-          </button>
+          <div className="px-3 pt-3 pb-2">
+          <h5 className="add-row-title"><span className='aliagn-self-center'> Expenses Details</span> 
+          <span className="add-row-icon"><img src="/add-btn.svg" onClick={handleOpenAddExpenseModal}></img> </span> 
+          </h5>
+        </div>
+          // <button
+          //   className="border-[#DFE2EF] btn btn-outline-primary py-2 px-2 rounded-0 bg-white flex flex-row items-center justify-start gap-[5px] whitespace-nowrap border-[1px] border-solid border-lavender-200 hover:bg-gainsboro hover:box-border hover:border-[1px] hover:border-solid hover:border-lightsteelblue text-center"
+          //   onClick={handleOpenAddExpenseModal}
+          // >
+          //   <img
+          //     className="h-5 w-5 relative min-h-[20px] me-1"
+          //     loading="lazy"
+          //     src="/addicon.svg"
+          //   />
+          //   <div className="relative text-sm font-semibold font-inter text-royalblue-300 text-left inline-block min-w-[120px]">
+          //     Add Expenses
+          //   </div>
+          // </button>
         )}
 
-        <Snackbar
-          open={openSnackbar}
-          autoHideDuration={6000}
-          onClose={handleCloseSnackbar}
-          message={successMessage}
-          anchorOrigin={{ vertical: "top", horizontal: "right" }}
-        />
+        </div>
       </div>
+      <div sx={{ width: "100%", boxShadow: "0 0 0 0" }} className="table-responsive box-pad">
       <TableContainer
-        sx={{ width: "100%", boxShadow: "0 0 0 0", border: "0px" }}
+        sx={{ maxHeight: 440 }}
         component={Paper}
-        className="py-2 py-2 "
+        className="border-top-0 border-bottom-0 table-rborder"
       >
         <Table
-          aria-label="simple table"
-          className="table-auto overflow-visible table-bordered border border-gray-200 w-100"
+        style={{ width: "100%" }}
+        className="table-auto overflow-visible sp-inputs border-gray-200"
+        sx={{ "& .MuiTableCell-root": {} }}
+        stickyHeader
+        aria-label="sticky table"
         >
-          <TableHead className="bg-[#E8EBF9] text-slategray-100 w-100">
+          <TableHead 
+            style={{ width: "100%" }}
+            className="bg-[#E8EBF9] text-slategray-100 text-xs sticky"
+            >
+
             <TableRow
               style={{
-                backgroundColor: "#E8EBF9",
+                backgroundColor: "#fff",
                 color: "#6e7391",
                 width: "100%",
               }}
@@ -502,37 +514,37 @@ setShowOtherPurposeField(expenses.purpose_name === "Others");
               
               <TableCell
                 style={{ color: "#6e7391" }}
-                className="text-uppercase px-4 py-4 fw-medium text-center"
+                className="text-uppercase px-2 py-1 fw-medium no-border"
               >
                 WBS
               </TableCell>
               <TableCell
                 style={{ color: "#6e7391" }}
-                className="text-uppercase px-2 py-2 fw-medium text-center"
+                className="text-uppercase px-2 py-1 fw-medium no-border"
               >
                 DATE
               </TableCell>
               <TableCell
                 style={{ color: "#6e7391" }}
-                className="text-uppercase px-2 py-2 fw-medium text-center"
+                className="text-uppercase px-2 py-1 fw-medium no-border"
               >
                 PURPOSE
               </TableCell>
               <TableCell
                 style={{ color: "#6e7391" }}
-                className="text-uppercase px-2 py-2 fw-medium text-center"
+                className="text-uppercase px-2 py-1 fw-medium no-border"
               >
                 AMOUNT
               </TableCell>
               <TableCell
                 style={{ color: "#6e7391" }}
-                className="text-uppercase px-2 py-2 fw-medium text-center"
+                className="text-uppercase px-2 py-1 fw-medium no-border"
               >
                 DOCUMENTS
               </TableCell>
               <TableCell
                 style={{ color: "#6e7391" }}
-                className="text-uppercase px-4 py-4 fw-medium text-center"
+                className="text-uppercase px-2 py-1 fw-medium no-border"
               >
                 ACTIONS
               </TableCell>
@@ -542,19 +554,19 @@ setShowOtherPurposeField(expenses.purpose_name === "Others");
             {expenses.map((expense, index) => (
               <TableRow key={index}>
                 
-                <TableCell className="px-2 py-2 text-center">
+                <TableCell className="px-2 py-1 border-0">
                   {expense.task_wbsId}
                 </TableCell>
-                <TableCell className="px-2 py-2 text-center">
+                <TableCell className="px-2 py-1 border-0">
                   {expense.date}
                 </TableCell>
-                <TableCell className="px-2 py-2 text-center">
+                <TableCell className="px-2 py-1 border-0">
                   {expense.purpose}
                 </TableCell>
-                <TableCell className="px-2 py-2 text-center">
+                <TableCell className="px-2 py-1 border-0">
                   ₹{expense.amount}
                 </TableCell>
-                <TableCell className="px-2 py-2 text-center">
+                <TableCell className="px-2 py-1 border-0">
                   {expense.documents && expense.documents.length > 0 ? (
                     expense.documents.map((doc, index) => (
                       <div key={index}>
@@ -571,7 +583,7 @@ setShowOtherPurposeField(expenses.purpose_name === "Others");
                     <span>No documents</span>
                   )}
                 </TableCell>
-                <TableCell className="px-2 py-2 text-center">
+                <TableCell className="px-2 py-1 border-0">
                   {status === "To Be Submitted" && (
                     <>
                       <IconButton onClick={() => handleEditExpense(expense.id)}>
@@ -591,6 +603,13 @@ setShowOtherPurposeField(expenses.purpose_name === "Others");
           </TableBody>
         </Table>
       </TableContainer>
+      <Snackbar
+          open={openSnackbar}
+          autoHideDuration={6000}
+          onClose={handleCloseSnackbar}
+          message={successMessage}
+          anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        />
       <Modal
         open={isAddExpenseModalOpen}
         onClose={handleCloseAddExpenseModal}
@@ -795,7 +814,8 @@ setShowOtherPurposeField(expenses.purpose_name === "Others");
           </Box>
         </Box>
       </Modal>
-    </div>
+      </div>
+    </>
   );
 };
 export default Expenses;

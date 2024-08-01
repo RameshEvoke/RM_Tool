@@ -15,8 +15,8 @@ const WbsTimeReporting = () => {
         <div className="outlet">
           <Header />
          <div className="layout-section">
-          <h4>Workflow Details</h4>
-         <div className="card">
+          <h4 className="workflow-title">Workflow Details</h4>
+         <div className="card border-none">
            {/* <Breadcrumb /> */}
             <TimeReportContent />
           </div>
