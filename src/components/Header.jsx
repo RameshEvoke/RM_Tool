@@ -72,7 +72,7 @@ const Header = () => {
                         <div className='header-search pos-rel'>
                             <input className='form-control' type='text' placeholder='Search'></input>
                             <span className='searchicon'>
-                                <img alt="" src="/search-icon.png" /></span>
+                                <img alt="" src="/search-icon.svg" /></span>
                         </div>
                     </div>
                     <div>

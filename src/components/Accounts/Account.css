@@ -53,7 +53,7 @@ body {
 }
 
 .form-group textarea {
-  height: 100px;
+  height: 60px;
   resize: vertical;
 }
 

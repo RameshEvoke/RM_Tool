@@ -81,13 +81,24 @@ body{
 .pos-rel{
   position: relative;
 }
+.search-box{
+  box-shadow: none !important;
+  height: 34px;
+  border: 1px solid #ccc !important;
+  padding-right: 2rem;
+  padding-left: 5px !important;
+  outline: 0 !important;
+}
+.tab-gray{
+  background: #E5E6E6;
+}
 .searchicon{
   position: absolute;
   top: 7px;
   right: 10px;
 }
 .searchicon img{
-  height: 20px;
+  height: 15px;
 }
 .user-list{
   display: flex;
@@ -486,4 +497,66 @@ display: block;
     width: 100%;
     border: none;
 }
+
+}
+.account-tabs button{
+  font-size: 14px;
+}
+.btn-primary{
+  background-color: #F16A22 !important;
+  border: 1px solid #F16A22 !important;
+  box-shadow: none !important;
+  font-size: 15px;
+  font-weight: 500;
+}
+.btn-primary:hover{
+  background-color: #DF5810 !important;
+}
+.btn-secondary{
+  border: 1px solid #919EAB52 !important;
+  color: #000;
+  background-color: #fff;
+  box-shadow: none !important;
+  font-size: 15px;
+  font-weight: 500;
+}
+.header-bg{
+  border-bottom: 1px solid #ccc;
+  background-color: #1A2942;
+  color: #fff;
+}
+.bg-sctive{
+  background-color: #D8DADA;
+  font-weight: 500;
+}
+.tbl-heads{
+  color: #6C757D ! IMPORTANT;
+  font-weight: 600;
+  font-size: 14px;
+}
+.account-name{
+  color: #1A2942 !important;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.font-14{
+  font-size: 14px;
+}
+.tbl-pad th{
+  padding: 0 0.8rem;
+  border: none !important;
+  }
+.tbl-pad td{
+padding: 0.8rem;
+}
+.titles{
+  color: #071437;
+  font-weight: 600;
+}
+.titles.sub-title{
+  font-size: 16px;
+}
+.btn-width{
+  min-width: 100px;
+  font-size: 15px;
 }

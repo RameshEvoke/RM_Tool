@@ -211,17 +211,22 @@ const AccountsManagement = () => {
       <div className="mb-4 mt-4">
         <b className="mr-4">Accounts</b>
         <div className="mt-3 mb-2 flex items-center relative justify-content-between">
-          <input
+         <div className="pos-rel">
+         <input
             type="text"
             placeholder="Search Account"
             value={searchTerm}
             onChange={handleSearchChange}
-            className="border border-[#DFE2EF] px-3 py-2 pr-8 search-box"
+            className="search-box"
           />
-          <div className="flex justify-center">
+          <span className="searchicon">
+            <img src="./search-icon.svg"/>
+          </span>
+         </div>
+          <div className="flex justify-center account-tabs">
             <button
               className={`px-4 ${
-                activeTab === "all" ? "bg-blue-500 text-white" : "bg-gray-200"
+                activeTab === "all" ? "bg-sctive" : "tab-gray"
               }`}
               onClick={() => filterData("all")}
             >
@@ -230,8 +235,8 @@ const AccountsManagement = () => {
             <button
               className={`px-4 py-2 ${
                 activeTab === "Active"
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-200"
+                  ? "bg-sctive"
+                  : "tab-gray"
               }`}
               onClick={() => filterData("Active")}
             >
@@ -240,8 +245,8 @@ const AccountsManagement = () => {
             <button
               className={`px-4 py-2 ${
                 activeTab === "Closed"
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-200"
+                  ? "bg-sctive"
+                  : "tab-gray"
               }`}
               onClick={() => filterData("Closed")}
             >
@@ -250,7 +255,7 @@ const AccountsManagement = () => {
           </div>
           <NavLink
             to={`/AddAccount`}
-            className="btn btn-primary py-2 px-3 rounded-0 ml-4 create-btn"
+            className="btn btn-primary"
             // onClick={handleOpenAccountModal}
           >
             Create Account
@@ -274,79 +279,78 @@ const AccountsManagement = () => {
           <table
             style={{ width: "100%" }}
             id="test-table"
-            className="table-auto bg-white mb-4 table-bordered border-white"
+            className="table-auto bg-white mb-4 table-bordered border-white tbl-pad"
           >
             <thead className="bg-gray-50" >
               <tr>
-                <th className="bg-[#E8EBF9] text-slategray-100 text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Account Name
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100 text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Account Manager
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100 text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Status
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100 text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Contact Info
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100 text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Industry
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100 text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Budget Allocated
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100 text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Actual Spend
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100 text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Revenue Generated
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100 text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   P&L
                 </th>
                 
               </tr>
             </thead>
 
-            <tbody className="bg-white">
+            <tbody className="bg-white font-14">
               {data.map((employee) => (
                 <tr key={employee.account_id} className="cursor-pointer">
                   <td
-                    className="border text-blue-500 text-sm px-3 py-3"
-                    style={{ textDecoration: "underline" }}
+                   
                   >
                     <Typography className="relative inline-block">
                       {/* Ensure <Link> wraps around the content you want clickable */}
-                      <Link to={`/projects/${employee.account_id}`}>
+                      <Link to={`/projects/${employee.account_id}`} className="account-name">
                         {employee.account_name}
                       </Link>
                     </Typography>
                   </td>
 
-                  <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                  <td>
                     {employee.account_owner}
                   </td>
-                  <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                  <td>
                     {employee.account_status}
                   </td>
-                  <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                  <td>
                     {employee.website}
                   </td>
-                  <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                  <td>
                     {employee.business_domain_name}
                   </td>
-                  <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
-                    {""}
+                  <td>
+                    {" - "}
                   </td>
-                  <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
-                    {""}
+                  <td>
+                    {" - "}
                   </td>
-                  <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
-                    {""}
+                  <td>
+                    {" - "}
                   </td>
-                  <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
-                    {""}
+                  <td>
+                    {" - "}
                   </td>
                   
                 </tr>

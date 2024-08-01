@@ -233,230 +233,241 @@ const AddNewAccount = () => {
   };
 
   return (
-    <div className="container-fluid mt-2 card">
-      <h5 className="pt-2">New Customer Account Creation</h5>
-      <form onSubmit={handleCreateAccount}>
-        <div className="row">
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="relation-start-date">Relation Start Date:</label>
-              <input
-                type="date"
-                id="relation-start-date"
-                name="relationStartDate"
-                value={accountData.relationStartDate}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="account-name">Account Name:</label>
-              <input
-                type="text"
-                id="account-name"
-                name="accountName"
-                value={accountData.accountName}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="country">Country:</label>
-              <select
-                id="country"
-                name="country"
-                value={accountData.country}
-                onChange={handleInputChange}
-                required
-              >
-                <option value="">Select Country</option>
-                {countries.map((country) => (
-                  <option key={country.id} value={country.country_name}>
-                    {country.country_name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="region">Region:</label>
-              <select
-                id="region"
-                name="region"
-                value={accountData.region}
-                onChange={handleInputChange}
-                required
-              >
-                <option value="">Select Region</option>
-                {region.map((region) => (
-                  <option key={region.region_id} value={region.region_name}>
-                    {region.region_name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="customerInfo">Customer Info:</label>
-              <input
-                type="text"
-                id="customerInfo"
-                name="customerInfo"
-                value={accountData.customerInfo}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="customerContactNo">Customer Contact No:</label>
-              <input
-                type="text"
-                id="customerContactNo"
-                name="customerContactNo"
-                value={accountData.customerContactNo}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          </div>
-          <div className="col-md-12">
-            <div className="form-group">
-              <label htmlFor="customer-address">Customer Address:</label>
-              <textarea
-                id="customer-address"
-                name="customerAddress"
-                value={accountData.customerAddress}
-                onChange={handleInputChange}
-                required
-              ></textarea>
-            </div>
-          </div>
-          
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="customerEmailAddress">
-                Customer Email Addresses:
-              </label>
-              <input
-                type="email"
-                id="customerEmailAddress"
-                name="customerEmailAddress"
-                value={accountData.customerEmailAddress}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          </div>
-          <div className="col-md-6">
-
-            <div className="form-group">
-              <label htmlFor="website">Website:</label>
-              <input
-                type="text"
-                id="website"
-                name="website"
-                value={accountData.website}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="industry">Industry:</label>
-              <select
-                id="industry"
-                name="industry"
-                value={accountData.industry}
-                onChange={handleInputChange}
-              >
-                <option value="">Select Industry</option>
-                {businessDomain.map((businessDomain) => (
-                  <option
-                    key={businessDomain.business_domain_id}
-                    value={businessDomain.business_domain_name}
+    <div className="container-fluid mt-2">
+      <h5 className="pt-2 titles">New Customer Account Creation</h5>
+      <div className="bg-white p-3">
+        <h5 className="titles sub-title">Account Details</h5>
+        <form onSubmit={handleCreateAccount}>
+          <div className="card px-2 pt-2">
+            <div className="row">
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="account-name">Account Name:</label>
+                  <input
+                    type="text"
+                    id="account-name"
+                    name="accountName"
+                    value={accountData.accountName}
+                    onChange={handleInputChange}
+                    required />
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="customerInfo">Customer Info:</label>
+                  <input
+                    type="text"
+                    id="customerInfo"
+                    name="customerInfo"
+                    value={accountData.customerInfo}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="customerContactNo">Customer Contact No:</label>
+                  <input
+                    type="text"
+                    id="customerContactNo"
+                    name="customerContactNo"
+                    value={accountData.customerContactNo}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="customerEmailAddress">
+                    Customer Email Addresses:
+                  </label>
+                  <input
+                    type="email"
+                    id="customerEmailAddress"
+                    name="customerEmailAddress"
+                    value={accountData.customerEmailAddress}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="relation-start-date">Relation Start Date:</label>
+                  <input
+                    type="date" placeholder="Hekl"
+                    id="relation-start-date"
+                    name="relationStartDate"
+                    value={accountData.relationStartDate}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="industry">Industry:</label>
+                  <select
+                    id="industry"
+                    name="industry"
+                    value={accountData.industry}
+                    onChange={handleInputChange}
                   >
-                    {businessDomain.business_domain_name}
-                  </option>
-                ))}
-              </select>
+                    <option value="">Select Industry</option>
+                    {businessDomain.map((businessDomain) => (
+                      <option
+                        key={businessDomain.business_domain_id}
+                        value={businessDomain.business_domain_name}
+                      >
+                        {businessDomain.business_domain_name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="accountManager">Account Manager:</label>
+                  <select
+                    id="accountManager"
+                    name="accountManager"
+                    value={accountData.accountManager}
+                    onChange={(e) =>
+                      handleInputChange({
+                        target: { name: "accountManager", value: e.target.value },
+                      })
+                    }
+                  >
+                    <option value="">Select Account Manager</option>
+                    {data.map((accountManager) => (
+                      <option key={accountManager.emp_id} value={accountManager.emp_id}>
+                        {accountManager.emp_name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="accountSpecs">Account Specifications:</label>
+                  <textarea className="field-hyt"
+                    id="accountSpecs"
+                    name="accountSpecs"
+                    value={accountData.accountSpecs}
+                    onChange={handleInputChange}
+                  ></textarea>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="accountManager">Account Manager:</label>
-              <select
-                id="accountManager"
-                name="accountManager"
-                value={accountData.accountManager}
-                onChange={(e) =>
-                  handleInputChange({
-                    target: { name: "accountManager", value: e.target.value },
-                  })
-                }
-              >
-                <option value="">Select Account Manager</option>
-                {data.map((accountManager) => (
-                  <option key={accountManager.emp_id} value={accountManager.emp_id}>
-                    {accountManager.emp_name}
-                  </option>
-                ))}
-              </select>
+          <h5 className="titles sub-title mt-3">Customer Location</h5>
+          <div className="card px-2 pt-2">
+            <div className="row">
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="country">Country:</label>
+                  <select
+                    id="country"
+                    name="country"
+                    value={accountData.country}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="">Select Country</option>
+                    {countries.map((country) => (
+                      <option key={country.id} value={country.country_name}>
+                        {country.country_name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="form-group">
+                  <label htmlFor="region">Region:</label>
+                  <select
+                    id="region"
+                    name="region"
+                    value={accountData.region}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="">Select Region</option>
+                    {region.map((region) => (
+                      <option key={region.region_id} value={region.region_name}>
+                        {region.region_name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+              <div className="col-md-3">
+              <div className="form-group">
+                <label htmlFor="website">Website:</label>
+                <input
+                  type="text"
+                  id="website"
+                  name="website"
+                  value={accountData.website}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="form-group">
+                <label htmlFor="customer-address">Customer Address:</label>
+                <textarea rows="2"
+                  id="customer-address"
+                  name="customerAddress"
+                  value={accountData.customerAddress}
+                  onChange={handleInputChange}
+                  required
+                ></textarea>
+              </div>
+            </div>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="accountStatus">Status:</label>
-              <select
-                id="accountStatus"
-                name="accountStatus"
-                value={accountData.accountStatus}
-                onChange={handleInputChange}
-                required
-              >
-                <option value="">Select Status</option>
-                <option value="Active">Active</option>
-                <option value="Closed">Closed</option>
-              </select>
+          <h5 className="titles sub-title mt-3">Status</h5>
+          <div className="card px-2 pt-2">
+            <div className="row">
+            <div className="col-md-9">
+              <div className="form-group">
+                <label htmlFor="preferencesAndNotes">Preferences and Notes:</label>
+                <textarea
+                  id="preferencesAndNotes"
+                  name="preferencesAndNotes"
+                  value={accountData.preferencesAndNotes}
+                  onChange={handleInputChange}
+                ></textarea>
+              </div>
+            </div>
+            <div className="col-md-3">
+              <div className="form-group">
+                <label htmlFor="accountStatus">Status:</label>
+                <select
+                  id="accountStatus"
+                  name="accountStatus"
+                  value={accountData.accountStatus}
+                  onChange={handleInputChange}
+                  required
+                >
+                  <option value="">Select Status</option>
+                  <option value="Active">Active</option>
+                  <option value="Closed">Closed</option>
+                </select>
+              </div>
+            </div>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="accountSpecs">Account Specifications:</label>
-              <textarea className="field-hyt"
-                id="accountSpecs"
-                name="accountSpecs"
-                value={accountData.accountSpecs}
-                onChange={handleInputChange}
-              ></textarea>
-            </div>
+          <div className="text-right mt-3">
+          <button type="submit" className="btn btn-primary me-2">Create Account</button>
+          <button type="submit" className="btn btn-secondary">Reset</button>
           </div>
-          <div className="col-md-12">
-            <div className="form-group">
-              <label htmlFor="preferencesAndNotes">Preferences and Notes:</label>
-              <textarea
-                id="preferencesAndNotes"
-                name="preferencesAndNotes"
-                value={accountData.preferencesAndNotes}
-                onChange={handleInputChange}
-              ></textarea>
-            </div>
-          </div>
-          <div className="col-md-12">
-            <div className="form-group">
-              <button type="submit" className="primary-btn">Create Account</button>
-            </div>
-          </div>
-        </div>
-        {/* <div className="form-group">
+          {/* <div className="form-group">
           <label htmlFor="billingInfo">Billing Information:</label>
           <input
             type="text"
@@ -466,7 +477,8 @@ const AddNewAccount = () => {
             onChange={handleInputChange}
           />
         </div> */}
-      </form>
+        </form>
+      </div>
     </div>
   );
 };
