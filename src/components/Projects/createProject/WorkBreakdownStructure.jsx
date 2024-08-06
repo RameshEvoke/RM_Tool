@@ -91,8 +91,8 @@ const WorkBreakdownStructure = ({ data, onChange }) => {
 
   return (
     <div>
-      <h3 className="mt-3">Work Breakdown Structure (WBS)</h3>
-      <div class="table-responsive">
+       <h5 className="titles sub-title mt-3">Work Breakdown Structure (WBS)</h5>
+      <div class="table-responsive card hor-pad pt-3 pb-0">
       <table className="table w-100">
         <thead>
           <tr>
@@ -110,7 +110,7 @@ const WorkBreakdownStructure = ({ data, onChange }) => {
         <tbody>
           {wbsEntries.map((item, index) => (
             <tr key={index}>
-              <td>
+              <td className="ps-0">
                 <input className='form-control'
                   type="text"
                   value={item.wbsName}
@@ -147,7 +147,7 @@ const WorkBreakdownStructure = ({ data, onChange }) => {
                 />
               </td>
               <td>
-                <select className='form-select'
+                <select className='form-select ellipsis-field'
                   value={item.wbsLevel}
                   onChange={(e) =>
                     handleChange(index, "wbsLevel", e.target.value)
@@ -180,7 +180,7 @@ const WorkBreakdownStructure = ({ data, onChange }) => {
                 />
               </td>
               <td>
-                <select className='form-select'
+                <select className='form-select ellipsis-field'
                   value={item.wbsStatus}
                   onChange={(e) =>
                     handleChange(index, "wbsStatus", e.target.value)
@@ -194,8 +194,8 @@ const WorkBreakdownStructure = ({ data, onChange }) => {
                   ))}
                 </select>
               </td>
-              <td>
-                <button className="btn btn-secondary" type="button" onClick={() => removeWbs(index)}>
+              <td className="pe-0">
+                <button className="btn btn-secondary tb-remv-btn" type="button" onClick={() => removeWbs(index)}>
                   Remove
                 </button>
               </td>
@@ -204,9 +204,11 @@ const WorkBreakdownStructure = ({ data, onChange }) => {
         </tbody>
       </table>
       </div>
-      <button className="btn primary-btn" type="button" onClick={addWbs}>
+    <div className="text-right">
+    <button className="btn btn-primary mt-3" type="button" onClick={addWbs}>
         Add WBS
       </button>
+    </div>
     </div>
   );
 };

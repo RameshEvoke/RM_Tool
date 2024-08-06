@@ -10,73 +10,75 @@ const AdditionalInformation = ({ data, onChange }) => {
 
   return (
     <div>
-      <h3 className="mt-3">Additional Information</h3>
+      <h5 className="titles sub-title mt-3">Additional Information</h5>
       <div className="container-fluid p-0">
-        <div className="row mx-0">
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="projectMilestones">Project Milestones:</label>
-              <textarea
-                id="projectMilestones"
-                name="projectMilestones"
-                value={data.projectMilestones || ""}
-                onChange={handleChange}
-              />
+        <div className="card px-3 pt-3">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="form-group">
+                {/* <label htmlFor="projectMilestones">Project Milestones:</label> */}
+                <textarea placeholder="Project Milestones"
+                  id="projectMilestones"
+                  name="projectMilestones"
+                  value={data.projectMilestones || ""}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="keyDeliverables">Key Deliverables:</label>
-              <textarea
-                id="keyDeliverables"
-                name="keyDeliverables"
-                value={data.keyDeliverables || ""}
-                onChange={handleChange}
-              />
+            <div className="col-md-6">
+              <div className="form-group">
+                {/* <label htmlFor="keyDeliverables">Key Deliverables:</label> */}
+                <textarea placeholder="Key Deliverables"
+                  id="keyDeliverables"
+                  name="keyDeliverables"
+                  value={data.keyDeliverables || ""}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="projectObjectives">Project Objectives:</label>
-              <textarea
-                id="projectObjectives"
-                name="projectObjectives"
-                value={data.projectObjectives || ""}
-                onChange={handleChange}
-              />
+            <div className="col-md-6">
+              <div className="form-group">
+                {/* <label htmlFor="projectObjectives">Project Objectives:</label> */}
+                <textarea placeholder="Project Objectives"
+                  id="projectObjectives"
+                  name="projectObjectives"
+                  value={data.projectObjectives || ""}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="requiredDocuments">Required Documents:</label>
-              <textarea
-                id="requiredDocuments"
-                name="requiredDocuments"
-                value={data.requiredDocumentss || ""}
-                onChange={handleChange}
-              />
+            <div className="col-md-6">
+              <div className="form-group">
+                {/* <label htmlFor="requiredDocuments">Required Documents:</label> */}
+                <textarea placeholder="Required Documents"
+                  id="requiredDocuments"
+                  name="requiredDocuments"
+                  value={data.requiredDocumentss || ""}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="technologies">Technologies:</label>
-              <textarea
-                id="technologies"
-                name="technologies"
-                value={data.technologies || ""}
-                onChange={handleChange}
-              />
+            <div className="col-md-6">
+              <div className="form-group">
+                {/* <label htmlFor="technologies">Technologies:</label> */}
+                <textarea placeholder="Technologies"
+                  id="technologies"
+                  name="technologies"
+                  value={data.technologies || ""}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-          </div>
-          <div className="col-md-6">
-            <div className="form-group">
-              <label htmlFor="assumptions">Assumptions/Notes :</label>
-              <textarea
-                id="assumptions"
-                name="assumptions"
-                value={data.assumptions || ""}
-                onChange={handleChange}
-              />
+            <div className="col-md-6">
+              <div className="form-group">
+                {/* <label htmlFor="assumptions">Assumptions/Notes :</label> */}
+                <textarea placeholder="Assumptions/Notes"
+                  id="assumptions"
+                  name="assumptions"
+                  value={data.assumptions || ""}
+                  onChange={handleChange}
+                />
+              </div>
             </div>
           </div>
         </div>

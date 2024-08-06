@@ -233,12 +233,12 @@ const AddNewAccount = () => {
   };
 
   return (
-    <div className="container-fluid mt-2">
+    <div className="container-fluid mt-2 p-0">
       <h5 className="pt-2 titles">New Customer Account Creation</h5>
       <div className="bg-white p-3">
         <h5 className="titles sub-title">Account Details</h5>
         <form onSubmit={handleCreateAccount}>
-          <div className="card px-2 pt-2">
+          <div className="card px-3 pt-3">
             <div className="row">
               <div className="col-md-3">
                 <div className="form-group">
@@ -361,7 +361,7 @@ const AddNewAccount = () => {
             </div>
           </div>
           <h5 className="titles sub-title mt-3">Customer Location</h5>
-          <div className="card px-2 pt-2">
+          <div className="card px-3 pt-3">
             <div className="row">
               <div className="col-md-3">
                 <div className="form-group">
@@ -429,7 +429,7 @@ const AddNewAccount = () => {
             </div>
           </div>
           <h5 className="titles sub-title mt-3">Status</h5>
-          <div className="card px-2 pt-2">
+          <div className="card px-3 pt-3">
             <div className="row">
               <div className="col-md-9">
                 <div className="form-group">
@@ -461,8 +461,9 @@ const AddNewAccount = () => {
             </div>
           </div>
           <div className="text-right mt-3">
-            <button type="submit" className="btn btn-primary me-2">Create Account</button>
-            <button type="submit" className="btn btn-secondary">Reset</button>
+          <button type="submit" className="btn btn-secondary me-2">Reset</button>
+            <button type="submit" className="btn btn-primary">Create Account</button>
+           
           </div>
           {/* <div className="form-group">
           <label htmlFor="billingInfo">Billing Information:</label>

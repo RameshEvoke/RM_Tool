@@ -171,7 +171,10 @@ const ProjectForm = () => {
   const { budgetFinancialMetrics } = formData;
   const showInvoices = !!budgetFinancialMetrics.bidType;
   return (
-    <form onSubmit={handleSubmit}>
+    <div>
+    <h5 className="pt-2 titles mt-2">New Project Creation</h5>
+      <div className="bg-white p-3">
+      <form onSubmit={handleSubmit}>
       <ProjectDetails
         data={formData.projectDetails}
         onChange={(data) => handleChange("projectDetails", data)}
@@ -210,8 +213,12 @@ const ProjectForm = () => {
         data={formData.additionalInformation}
         onChange={(data) => handleChange("additionalInformation", data)}
       />
-      <button type="submit">Submit</button>
+      <div className="text-right pb-2">
+      <button type="submit" className="btn btn-primary mt-3">Submit</button>
+      </div>
     </form>
+      </div>
+    </div>
   );
 };
 

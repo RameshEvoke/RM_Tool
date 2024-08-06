@@ -112,7 +112,7 @@ const Header = () => {
                                 <div>
                                     <img className="user-avtar" alt="" src="/profilepic@2x.png" />
                                 </div>
-                                <div className='pos-rel' onClick={handleToggleLogout}>
+                                <div className='pos-rel align-self-center' onClick={handleToggleLogout}>
                                     <span className='username'>{localStorage.getItem('emp_UserName')} <img src='/arrow-down.svg' ></img></span>
                                     <div className='userrole'>{localStorage.getItem('emp_Role')}</div>
                                     {showLogout && (

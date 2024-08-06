@@ -86,22 +86,27 @@ const ProjectManagement = () => {
 
   return (
     <div className="" style={{ width: "100%" }}>
-      <div className="mb-4 mt-4">
-        {!account_id && <b className="mr-4">Projects</b>}
+      <div className="mb-1 mt-4">
+        {!account_id &&  <h5 className="pt-2 titles">Projects</h5>}
 
         <div className="mt-3 mb-2 flex items-center relative justify-content-between">
-          <input
+        <div className="pos-rel">
+         <input
             type="text"
-            placeholder="Search Projects"
+            placeholder="Search Account"
             value={searchTerm}
             onChange={handleSearchChange}
-            className="border border-[#DFE2EF] px-3 py-2 pr-8 search-box"
+            className="search-box"
           />
+          <span className="searchicon">
+            <img src="./search-icon.svg"/>
+          </span>
+         </div>
 
-          <div className="flex justify-center">
+          <div className="flex justify-center account-tabs">
             <button
               className={`px-4  ${
-                activeTab === "all" ? "bg-blue-500 text-white" : "bg-gray-200"
+                activeTab === "all" ? "bg-sctive" : "tab-gray"
               }`}
               onClick={() => filterData("all")}
             >
@@ -110,8 +115,8 @@ const ProjectManagement = () => {
             <button
               className={`px-4 py-2 ${
                 activeTab === "in-progress"
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-200"
+                  ?  "bg-sctive"
+                  : "tab-gray"
               }`}
               onClick={() => filterData("in-progress")}
             >
@@ -120,8 +125,8 @@ const ProjectManagement = () => {
             <button
               className={`px-4 py-2  ${
                 activeTab === "completed"
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-200"
+                  ? "bg-sctive"
+                  : "tab-gray"
               }`}
               onClick={() => filterData("completed")}
             >
@@ -158,55 +163,52 @@ const ProjectManagement = () => {
           <table
             style={{ width: "100%" }}
             id="test-table"
-            className=" table-auto bg-white mb-4  table-bordered border-white"
+            className=" table-auto bg-white mb-4 table-bordered border-white tbl-pad"
           >
             <thead className="bg-gray-50">
               <tr>
-                <th className="bg-[#E8EBF9] text-slategray-100  text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Project Name
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100  text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Project Manager
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100  text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Status
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100  text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Technologies
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100  text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Project Start Date
                 </th>
                 <th className="bg-[#E8EBF9] text-slategray-100  text-left px-3 py-3 text-nowrap fw-bold text-sm">
                   Project End Date
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100  text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   No Of Resources
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100  text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Budget
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100  text-left px-3 py-3 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   Key Deliverable
                 </th>
-                <th className="bg-[#E8EBF9] text-slategray-100  text-left px-2 py-2 text-nowrap fw-bold text-sm">
+                <th className="tbl-heads">
                   ACTIONS
                 </th>
               </tr>
             </thead>
-            <tbody className="bg-white">
+            <tbody className="bg-white font-14">
               {data.map((employee) => (
                 <React.Fragment key={employee.id}>
                   <tr className="cursor-pointer ">
-                    <td
-                      className="border text-blue-500 text-sm px-3 py-3"
-                      style={{ textDecoration: "underline" }}
-                    >
+                    <td>
 
                     {employee.project_name.length > 10 ? (
                       <Typography className="relative inline-block">
                         <Tooltip title={employee.project_name}>
-                        <Link to={`/project/${employee.project_code}`}>
+                        <Link to={`/project/${employee.project_code}`}  className="account-name">
                           <span>
                             {employee.project_name.substring(0, 20)}...
                           </span>
@@ -215,35 +217,35 @@ const ProjectManagement = () => {
                         </Typography>
                       ) : (
                       <Typography className="relative inline-block">
-                      <Link to={`/project/${employee.project_code}`}>
+                      <Link to={`/project/${employee.project_code}`} className="account-name">
                         {employee.project_name}
                         </Link>
                         </Typography>
                       )}
 
                     </td>
-                    <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                    <td>
                       {employee.project_delivery_manager}
                     </td>
-                    <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                    <td>
                       {employee.project_status}
                     </td>
-                    <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                    <td>
                       {employee.technologies}
                     </td>
-                    <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                    <td>
                       {employee.project_start_date}
                     </td>
-                    <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                    <td>
                       {employee.project_end_date}
                     </td>
-                    <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                    <td>
                       {employee.team_size}
                     </td>
-                    <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                    <td>
                       {0}
                     </td>
-                    <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
+                    <td>
                       {employee.key_deliverables.length > 20 ? (
                         <Tooltip title={employee.key_deliverables}>
                           <span>
@@ -255,8 +257,8 @@ const ProjectManagement = () => {
                       )}
                     </td>
                     
-                    <td className="border border-gray-200 text-[#6E7391] text-sm px-3 py-3">
-                      <Link to={`/AddProject/${employee.project_code}`}>
+                    <td>
+                      <Link to={`/AddProject/${employee.project_code}`}  className="account-name">
                         {<FaPen />}
                       </Link>
                     </td>

@@ -208,8 +208,8 @@ const AccountsManagement = () => {
   //debugger;
   return (
     <div className="" style={{ width: "100%" }}>
-      <div className="mb-4 mt-4">
-        <b className="mr-4">Accounts</b>
+      <div className="mb-1 mt-4">
+        <h5 className="pt-2 titles">Accounts</h5>
         <div className="mt-3 mb-2 flex items-center relative justify-content-between">
          <div className="pos-rel">
          <input
