@@ -512,6 +512,9 @@ display: block;
 .btn-primary:hover{
   background-color: #DF5810 !important;
 }
+.form-control{
+  box-shadow: none !important;
+}
 .btn-secondary{
   border: 1px solid #919EAB52 !important;
   color: #000;

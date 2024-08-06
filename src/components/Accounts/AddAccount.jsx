@@ -242,8 +242,8 @@ const AddNewAccount = () => {
             <div className="row">
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="account-name">Account Name:</label>
-                  <input
+                  {/* <label htmlFor="account-name">Account Name:</label> */}
+                  <input className="form-control" placeholder="Accounte Name *"
                     type="text"
                     id="account-name"
                     name="accountName"
@@ -254,8 +254,8 @@ const AddNewAccount = () => {
               </div>
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="customerInfo">Customer Info:</label>
-                  <input
+                  {/* <label htmlFor="customerInfo">Customer Info:</label> */}
+                  <input className="form-control" placeholder="Customet Info"
                     type="text"
                     id="customerInfo"
                     name="customerInfo"
@@ -267,8 +267,8 @@ const AddNewAccount = () => {
               </div>
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="customerContactNo">Customer Contact No:</label>
-                  <input
+                  {/* <label htmlFor="customerContactNo">Customer Contact No:</label> */}
+                  <input className="form-control" placeholder="Customer Contact Number"
                     type="text"
                     id="customerContactNo"
                     name="customerContactNo"
@@ -280,10 +280,8 @@ const AddNewAccount = () => {
               </div>
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="customerEmailAddress">
-                    Customer Email Addresses:
-                  </label>
-                  <input
+                  {/* <label htmlFor="customerEmailAddress"> Customer Email Addresses: </label> */}
+                  <input className="form-control" placeholder="Customer Email Address"
                     type="email"
                     id="customerEmailAddress"
                     name="customerEmailAddress"
@@ -295,28 +293,27 @@ const AddNewAccount = () => {
               </div>
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="relation-start-date">Relation Start Date:</label>
-                  <input
-                    type="date" placeholder="Hekl"
+                  {/* <label htmlFor="relation-start-date">Relation Start Date:</label>
+                  <input className="form-control" 
+                    type="date" placeholder="Date"
                     id="relation-start-date"
                     name="relationStartDate"
                     value={accountData.relationStartDate}
                     onChange={handleInputChange}
-                    required
-                  />
-                  
+                    required/> */}
+                    <input className="form-control" type="text" placeholder="Relation Start Date"  onfocus="(this.type='date')"/>
                 </div>
               </div>
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="industry">Industry:</label>
-                  <select
+                  {/* <label htmlFor="industry">Industry:</label> */}
+                  <select className="form-control"
                     id="industry"
                     name="industry"
                     value={accountData.industry}
                     onChange={handleInputChange}
                   >
-                    <option value="">Select Industry</option>
+                    <option value="">Industry</option>
                     {businessDomain.map((businessDomain) => (
                       <option
                         key={businessDomain.business_domain_id}
@@ -330,8 +327,8 @@ const AddNewAccount = () => {
               </div>
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="accountManager">Account Manager:</label>
-                  <select
+                  {/* <label htmlFor="accountManager">Account Manager:</label> */}
+                  <select className="form-control"
                     id="accountManager"
                     name="accountManager"
                     value={accountData.accountManager}
@@ -341,7 +338,7 @@ const AddNewAccount = () => {
                       })
                     }
                   >
-                    <option value="">Select Account Manager</option>
+                    <option value="">Account Manager</option>
                     {data.map((accountManager) => (
                       <option key={accountManager.emp_id} value={accountManager.emp_id}>
                         {accountManager.emp_name}
@@ -352,8 +349,8 @@ const AddNewAccount = () => {
               </div>
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="accountSpecs">Account Specifications:</label>
-                  <textarea className="field-hyt"
+                  {/* <label htmlFor="accountSpecs">Account Specifications:</label> */}
+                  <textarea className="field-hyt" placeholder="Account Specifications"
                     id="accountSpecs"
                     name="accountSpecs"
                     value={accountData.accountSpecs}
@@ -368,8 +365,8 @@ const AddNewAccount = () => {
             <div className="row">
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="country">Country:</label>
-                  <select
+                  {/* <label htmlFor="country">Country:</label> */}
+                  <select className="form-control"
                     id="country"
                     name="country"
                     value={accountData.country}
@@ -387,8 +384,8 @@ const AddNewAccount = () => {
               </div>
               <div className="col-md-3">
                 <div className="form-group">
-                  <label htmlFor="region">Region:</label>
-                  <select
+                  {/* <label htmlFor="region">Region:</label> */}
+                  <select className="form-control"
                     id="region"
                     name="region"
                     value={accountData.region}
@@ -405,71 +402,71 @@ const AddNewAccount = () => {
                 </div>
               </div>
               <div className="col-md-3">
-              <div className="form-group">
-                <label htmlFor="website">Website:</label>
-                <input
-                  type="text"
-                  id="website"
-                  name="website"
-                  value={accountData.website}
-                  onChange={handleInputChange}
-                  required
-                />
+                <div className="form-group">
+                  {/* <label htmlFor="website">Website:</label> */}
+                  <input className="form-control"
+                    type="text"
+                    id="website"
+                    name="website"
+                    value={accountData.website}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col-md-6">
-              <div className="form-group">
-                <label htmlFor="customer-address">Customer Address:</label>
-                <textarea rows="2"
-                  id="customer-address"
-                  name="customerAddress"
-                  value={accountData.customerAddress}
-                  onChange={handleInputChange}
-                  required
-                ></textarea>
+              <div className="col-md-6">
+                <div className="form-group">
+                  {/* <label htmlFor="customer-address">Customer Address:</label> */}
+                  <textarea rows="2"
+                    id="customer-address"
+                    name="customerAddress"
+                    value={accountData.customerAddress}
+                    onChange={handleInputChange}
+                    required
+                  ></textarea>
+                </div>
               </div>
-            </div>
             </div>
           </div>
           <h5 className="titles sub-title mt-3">Status</h5>
           <div className="card px-2 pt-2">
             <div className="row">
-            <div className="col-md-9">
-              <div className="form-group">
-                <label htmlFor="preferencesAndNotes">Preferences and Notes:</label>
-                <textarea
-                  id="preferencesAndNotes"
-                  name="preferencesAndNotes"
-                  value={accountData.preferencesAndNotes}
-                  onChange={handleInputChange}
-                ></textarea>
+              <div className="col-md-9">
+                <div className="form-group">
+                  {/* <label htmlFor="preferencesAndNotes">Preferences and Notes:</label> */}
+                  <textarea
+                    id="preferencesAndNotes"
+                    name="preferencesAndNotes"
+                    value={accountData.preferencesAndNotes}
+                    onChange={handleInputChange}
+                  ></textarea>
+                </div>
               </div>
-            </div>
-            <div className="col-md-3">
-              <div className="form-group">
-                <label htmlFor="accountStatus">Status:</label>
-                <select
-                  id="accountStatus"
-                  name="accountStatus"
-                  value={accountData.accountStatus}
-                  onChange={handleInputChange}
-                  required
-                >
-                  <option value="">Select Status</option>
-                  <option value="Active">Active</option>
-                  <option value="Closed">Closed</option>
-                </select>
+              <div className="col-md-3">
+                <div className="form-group">
+                  {/* <label htmlFor="accountStatus">Status:</label> */}
+                  <select className="form-control"
+                    id="accountStatus"
+                    name="accountStatus"
+                    value={accountData.accountStatus}
+                    onChange={handleInputChange}
+                    required
+                  >
+                    <option value="">Select Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Closed">Closed</option>
+                  </select>
+                </div>
               </div>
-            </div>
             </div>
           </div>
           <div className="text-right mt-3">
-          <button type="submit" className="btn btn-primary me-2">Create Account</button>
-          <button type="submit" className="btn btn-secondary">Reset</button>
+            <button type="submit" className="btn btn-primary me-2">Create Account</button>
+            <button type="submit" className="btn btn-secondary">Reset</button>
           </div>
           {/* <div className="form-group">
           <label htmlFor="billingInfo">Billing Information:</label>
-          <input
+          <input className="form-control"
             type="text"
             id="billingInfo"
             name="billingInfo"
