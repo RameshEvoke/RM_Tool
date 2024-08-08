@@ -427,7 +427,7 @@ body{
 }
 .task-tabs{
   border: 1px solid #D4D8EA;
-  padding: 0.3rem;
+  /* padding: 0.3rem; */
 }
 .task-tabs-list{
   display: flex;
