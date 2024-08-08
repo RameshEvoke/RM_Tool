@@ -299,14 +299,14 @@ function Timereport({ selectedWeekStart, rows, setRows,
           )}
         </div>
       </div>
-      <Paper variant="elevation" sx={{ width: "100%", boxShadow: "0 0 0 0" }}>
+      <Paper variant="elevation" sx={{ width: "100%", boxShadow: "0 0 0 0" }} className="table-responsive box-pad">
         <TableContainer
           sx={{ maxHeight: 440 }}
-          className="py-2 px-2 border border-whitesmoke-200 border-top-0 border-bottom-0"
+          className="border-top-0 border-bottom-0 table-rborder"
         >
           <Table
             style={{ width: "100%" }}
-            className="table-auto overflow-visible sp-inputs border border-gray-200"
+            className="table-auto overflow-visible sp-inputs border-gray-200"
             sx={{ "& .MuiTableCell-root": {} }}
             stickyHeader
             aria-label="sticky table"
@@ -324,7 +324,7 @@ function Timereport({ selectedWeekStart, rows, setRows,
               >
                 {updatedColumns.map((column, index) => (
                   <TableCell
-                    className="text-uppercase px-2 py-1 fw-medium"
+                    className="text-uppercase px-2 py-1 fw-medium no-border"
                     key={index}
                     align="center"
                     width={column.width || "auto"}
@@ -355,8 +355,8 @@ function Timereport({ selectedWeekStart, rows, setRows,
                       style={{
                         fontSize:
                           column.label === "WBS" ||
-                          column.label === "Total Hours" ||
-                          column.label === "Action"
+                          column.label === "Total" || // column.label === "Total Hours" ||
+                          column.label === "Actions" // column.label === "Action"
                             ? "14px"
                             : "12px",
                       }}
@@ -370,7 +370,7 @@ function Timereport({ selectedWeekStart, rows, setRows,
             <TableBody className="">
               {rows &&
                 rows.map((row, rowIndex) => (
-                  <TableRow key={rowIndex} className="even:bg-[#e8f7ff]">
+                  <TableRow key={rowIndex}>
                     {updatedColumns.map((column, colIndex) => (
                       <TableCell
                         className="px-2 py-1 border-0"
@@ -397,7 +397,7 @@ function Timereport({ selectedWeekStart, rows, setRows,
                             onChange={(event) =>
                               handleChange(event, rowIndex, colIndex)
                             }
-                            SelectDisplayProps={{ className: "px-1 py-1" }}
+                            SelectDisplayProps={{ className: "px-1 py-1 drpdown-col" }}
                             disabled={
                               status === "To Be Approved" ||
                               status === "Approved"
@@ -426,7 +426,7 @@ function Timereport({ selectedWeekStart, rows, setRows,
     className: "py-2 text-xs",
                             }}
                             /*inputProps={{ className: 'py-1 px-1 text-xs' }}*/
-                            inputProps={{step: 0.5,min: 0,max: 8,className: "py-1 px-1 text-xs",inputMode: "decimal",
+                            inputProps={{step: 0.5,min: 0,max: 8,className: "py-1 px-2 text-xs",inputMode: "decimal",
                               pattern: "^\\d*\\.?\\d*$",
                             }}
                             style={{width:column.label === "Total Hours"? "60px": "40px"}}

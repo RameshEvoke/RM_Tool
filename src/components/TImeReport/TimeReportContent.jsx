@@ -420,7 +420,7 @@ const TimeReportContent = () => {
     } else if (!qemp_id && status === "To Be Approved") {
       return (
         <div className="flex justify-end gap-2 w-full p-4">
-          <Button
+          <Button className="btn primary-btn"
             style={{
               backgroundColor: "#F16A22",
               height: "33px",
@@ -485,11 +485,11 @@ const TimeReportContent = () => {
   return (
     <div>
       <div className="self-stretch flex flex-col items-start justify-start py-0 pl-0 box-border gap-[20px] max-w-full text-left text-xl text-black font-poppins">
-        <div className="self-stretch flex flex-col items-start justify-start max-w-full text-sm">
+        <div className="self-stretch flex flex-col items-start justify-start max-w-full text-sm border-box">
           <div className="self-stretch py-2 px-3 light-btm-brd">
             <div className="self-stretch flex flex-row items-center text-center justify-between max-w-full gap-[10px] mq750:flex-wrap mq1050:flex-wrap">
               <div className="flex flex-row items-center justify-start gap-[10px] max-w-full mq750:flex-wrap mq750:gap-[12px]">
-                <div className="flex-1 flex text-center flex-row items-center justify-start gap-[0px] min-w-[240px]">
+                <div className="flex-1 flex text-center flex-row items-center justify-start gap-[0px] min-w-[240px] f-color">
                   {!qemp_id && (
                     <img
                       className="h-[26px] w-[26px] relative object-contain min-h-[26px]"
