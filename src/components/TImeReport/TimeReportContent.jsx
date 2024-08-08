@@ -407,7 +407,7 @@ const TimeReportContent = () => {
             </Button>
           )}
 
-          <Button className="btn save-btn"
+          <Button className="btn save-btn secondary-btn"
             variant="contained"
             size="large"
             onClick={() => handleSubmit("Save")}

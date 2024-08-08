@@ -492,9 +492,9 @@ setShowOtherPurposeField(expenses.purpose_name === "Others");
         component={Paper}
         className="border-top-0 border-bottom-0 table-rborder"
       >
-        <Table
+        <Table 
         style={{ width: "100%" }}
-        className="table-auto overflow-visible sp-inputs border-gray-200"
+        className="table-auto overflow-visible sp-inputs border-gray-200 row-btm-brdr"
         sx={{ "& .MuiTableCell-root": {} }}
         stickyHeader
         aria-label="sticky table"
@@ -588,12 +588,13 @@ setShowOtherPurposeField(expenses.purpose_name === "Others");
                     <>
                       <IconButton onClick={() => handleEditExpense(expense.id)}>
                         {" "}
-                        <FaPen />
+                       <img src="/edit-tbl-icon.svg"/>
                       </IconButton>
                       <IconButton
                         onClick={() => handleDeleteExpense(expense.id)}
                       >
-                        <DeleteIcon />
+                         <img src="/trash.svg"/>
+                        {/* <DeleteIcon /> */}
                       </IconButton>
                     </>
                   )}
