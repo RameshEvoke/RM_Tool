@@ -351,6 +351,10 @@ span.aliagn-self-center {
 .status-flex {
   padding: 8px 20px !important;
 }
+.table-rborder .sp-inputs .css-9v0f8w-MuiFormControl-root-MuiTextField-root{
+  width: 65px !important;
+  height: 30px !important;
+}
 .table-rborder {
   border: 1px solid #E5E6E6 !important;
   border-radius: 9px !important;
@@ -359,6 +363,12 @@ span.aliagn-self-center {
   border-color: #E8E8ED !important;
   border-width: 0px 0px 1px 0px !important;
   text-transform: capitalize !important;
+}
+.table-rborder table tbody tr {
+  height: 60px;
+}
+.table-rborder table th, .table-rborder table td, .table-rborder table tfoot tr td{
+  padding: 4px !important;
 }
 .table-rborder table th span {
   color: #6C757D;
@@ -371,6 +381,15 @@ span.aliagn-self-center {
   padding-left: 10px !important;
   width: 14%;
 }
+.table-rborder table td:first-child {
+  padding-left: 10px !important;
+}
+.table-rborder table td:last-child {
+  padding-right: 10px !important;
+}
+.table-rborder table td:first-child fieldset {
+  width: 100% !important;
+}
 .table-rborder table .row-td {
   border: 1px solid #D8DADA;
   height: 30px;
@@ -382,10 +401,13 @@ span.aliagn-self-center {
   line-height: 19.6px;
   padding: 10px !important;
   color: #434345 !important;
-  padding-left: 18px !important;
+  padding-left: 24px !important;
 }
 .table-rborder table tr td input {
   font-size: 14px !important;
+  width: 65px !important;
+  height: 22px !important;
+  padding-left: 10px !important;
 }
 .table-rborder table td fieldset {
   height: 21px !important;
@@ -394,8 +416,9 @@ span.aliagn-self-center {
   padding: 7px 10px !important;
   color: #434345 !important;
   font-size: 14px !important;
-  /* left: -7px; */
-  /* line-height: 19.6px !important; */
+  width: 65px !important;
+  height: 30px !important;
+  border-radius: 5px !important;
 }
 .drpdown-col {
   font-size: 14px !important;
@@ -432,8 +455,9 @@ span.aliagn-self-center {
 .secondary-btn {
   background-color: #fff !important;
   color: #434345 !important;
-  border: 1px solid #919EAB52;
+  border: 1px solid #919EAB52 !important;
   padding: 6px 16px !important;
+  width: 71px;
   height: 36px;
   border-radius: 5px !important;
   box-shadow: none !important;
@@ -445,7 +469,7 @@ span.aliagn-self-center {
 .secondary-btn:hover {
   background-color: #fff !important;
   color: #434345 !important;
-  border: 1px solid #637381;
+  border: 1px solid #637381 !important;
 }
 .border-black {
   --bs-border-opacity: 1;
