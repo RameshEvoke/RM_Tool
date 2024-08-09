@@ -324,7 +324,7 @@ function Timereport({ selectedWeekStart, rows, setRows,
               >
                 {updatedColumns.map((column, index) => (
                   <TableCell
-                    className="text-uppercase px-2 py-1 fw-medium no-border"
+                    className="text-uppercase fw-medium no-border"
                     key={index}
                     align="center"
                     width={column.width || "auto"}
@@ -373,7 +373,7 @@ function Timereport({ selectedWeekStart, rows, setRows,
                   <TableRow key={rowIndex}>
                     {updatedColumns.map((column, colIndex) => (
                       <TableCell
-                        className="px-2 py-1 border-0"
+                        className="border-0"
                         key={colIndex}
                         align="center"
                         style={
